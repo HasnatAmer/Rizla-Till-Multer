@@ -1,0 +1,23 @@
+<h4>EDIT PAGE WOWWW !!!!</h4>
+{{#each errors}}
+    <div class="alert alert-danger">{{text}}</div>
+
+{{/each}}
+
+<div class="card card-body">
+    <h1> EDIT IDEAS {{s}}</h1>
+    <form action="/edited/{{s._id}}" method="post">
+        <!--<input type="hidden" name="_method" value="put">-->
+
+        <div class="form-group">
+            <label for="title">Title</label>
+            <input type="text" class="form-control" name="title" value="{{s.titl}}" required>
+        </div>
+
+        <div class="form-group">
+            <label for="details">Details</label>
+            <textarea class="form-control" name="details"  required>{{s.detail}}</textarea>
+        </div>
+        <button type= "submit" class = "btn btn-danger">Submit</button>
+    </form>
+</div>

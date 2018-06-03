@@ -1,0 +1,15 @@
+<h1>IDEA LISTING PAGE</h1>
+
+{{#each ideas}}
+    <div class="card card-body jumbotron">
+        <h4>{{this.titl}}</h4>
+        <p>{{this.detail}}</p>
+<a class ="btn btn-danger block "href="edit/{{this.id}}">EDIT</a>
+<br>
+        <a class ="btn btn-info block "href="delete/{{this.id}}">Delete</a>
+        <br>
+
+        <br>
+    </div>
+{{else}} <div class="jumbotron" ><h4>NO IDEA ADDED</h4></div>
+{{/each}}

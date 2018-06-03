@@ -1,0 +1,19 @@
+<form method="post" enctype="multipart/form-data" action="/multi/upload">
+    <input type="file" name="file">
+    <input type="submit" value="Submit">
+</form>
+<hr>
+<br>
+<img src="/image/{{na}}">
+<hr>
+{{#if files}}
+{{#each files }}
+    <div class = card card-body >
+<style> img {width:100%;}</style>
+<img src="image34/{{this.filename}}">
+
+    </div>
+
+{{/each}}
+    {{else}} <P>NO FILES TO SHOW </P>
+{{/if}}
